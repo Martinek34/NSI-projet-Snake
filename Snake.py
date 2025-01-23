@@ -3,6 +3,9 @@
 
 ####################### Projet NSI Snake ###########################
 
+# importation de tkinter pour l'interface graphique
+import tkinter as tk
+
 # impotrtation de la fonction random
 import random
 
@@ -46,3 +49,5 @@ jeu_plateau[7][7] = 1
 
 # Définir la direction du serpent
 
+
+# interface graphique
