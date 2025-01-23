@@ -30,11 +30,28 @@ def pomme (liste):
 # Zone de test
 pomme(jeu_plateau)
 
-# Initialisation du serpent (une liste de coordonnées)
-snake = [[7, 7]]
-jeu_plateau[7][7] = 1 
+# Initialisation du serpent
+def init(self):
+        self.body_size = BODY_PARTS
+        self.coordinates = []
+        self.squares = []
+
+        for i in range(0, BODY_PARTS):
+            self.coordinates.append([0, 0])
+
+  for x, y in self.coordinates:
+            square = canvas.create_rectangle(
+                x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOUR, tag="snake")
+            self.squares.append(square)
 
 # Définir la direction du serpent
 
 
 # interface graphique
+window = Tk()
+window.title("Snake Game")
+window.resizable(False, False)
+
+canvas = Canvas(window, bg=BACKGROUND_COLOUR,
+                height=GAME_HEIGHT, width=GAME_WIDTH)
+canvas.pack()
