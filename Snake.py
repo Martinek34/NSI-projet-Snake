@@ -45,19 +45,4 @@ snake = [[7, 7]]
 jeu_plateau[7][7] = 1 
 
 # Définir la direction du serpent
-direction = 'droite'  # Possible: 'haut', 'bas', 'gauche', 'droite'
 
-# Fonction pour déplacer le serpent
-def deplacer_serpent():
-  
-
-    tete_x, tete_y = serpent[0]  # Position de la tête du serpent
-
-    if direction == 'haut':
-        tete_x -= 1
-    elif direction == 'bas':
-        tete_x += 1
-    elif direction == 'gauche':
-        tete_y -= 1
-    elif direction == 'droite':
-        tete_y += 1
