@@ -13,7 +13,10 @@ import random
 def jeu_plateau ()
 for i in range (16):
   
+# Données 
 
+
+  
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
   """
@@ -31,18 +34,9 @@ def pomme (liste):
 pomme(jeu_plateau)
 
 # Initialisation du serpent
-def init(self):
-        self.body_size = BODY_PARTS
-        self.coordinates = []
-        self.squares = []
+def init 
 
-        for i in range(0, BODY_PARTS):
-            self.coordinates.append([0, 0])
 
-  for x, y in self.coordinates:
-            square = canvas.create_rectangle(
-                x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOUR, tag="snake")
-            self.squares.append(square)
 
 # Définir la direction du serpent
 
