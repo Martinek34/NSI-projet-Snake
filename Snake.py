@@ -6,9 +6,10 @@
 # importation de tkinter pour l'interface graphique
 import tkinter as tk
 
-# impotrtation de la fonction random
+# impotrtation des fonctions
 import random
-
+import os
+import time
 # creation du plateau de jeu
 def jeu_plateau ()
 for i in range (16):
@@ -33,12 +34,39 @@ def pomme (liste):
 # Zone de test
 pomme(jeu_plateau)
 
-# Initialisation du serpent
-def init 
+
+# Fonction pour faire bouger le snake
+"""
 
 
 
-# Définir la direction du serpent
+
+"""
+def move_snake(plateau, snake, direction):
+    tete_x, tete_y = snake[-1]
+    if direction == "w":
+        tete_y -= 1
+    elif direction == "s":
+        tete_y += 1
+    elif direction == "a":
+        tete_x -= 1
+    elif direction == "d":
+        tete_x += 1
+
+    nouvelle_tete = [tete_x, tete_y]
+    if nouvelle_tete in snake or tete_x < 0 or tete_y < 0 or tete_x >= len(plateau[0]) or tete_y >= len(plateau):
+        return False
+      
+#Pré-condition
+snake.append(new_head)
+    if board[head_y][head_x] == "F":
+        place_food(board, snake)
+    else:
+        tail = snake.pop(0)
+        board[tail[1]][tail[0]] = "."
+
+    board[head_y][head_x] = "S"
+    return True
 
 
 # interface graphique
