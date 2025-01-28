@@ -36,7 +36,7 @@ def pomme (liste):
   Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
   """
   # Pré-condition :
-  assert (len(liste)=len(ligne[0],"vous ne respectez pas la condition de passer un tableau carré en argument")
+  assert (len(liste) == len(ligne[0],"vous ne respectez pas la condition de passer un tableau carré en argument")
   liste[random(0,len(liste))][random(0,len(liste[0])] = 2
   return liste
 # Zone de test
@@ -64,9 +64,8 @@ def move_snake(plateau, snake, direction):
     nouvelle_tete = [tete_x, tete_y]
     if nouvelle_tete in snake or tete_x < 0 or tete_y < 0 or tete_x >= len(plateau[0]) or tete_y >= len(plateau):
         return False
-      
-#Pré-condition
-snake.append(new_head)
+    #Pré-condition
+    snake.append(new_head)
     if board[head_y][head_x] == "F":
         place_food(board, snake)
     else:
