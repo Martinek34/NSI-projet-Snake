@@ -44,13 +44,18 @@ pomme(jeu_plateau)
 
 
 # Fonction pour faire bouger le snake
-"""
-
-
-
-
-"""
 def move_snake(plateau, snake, direction):
+"""
+Déplace le serpent dans la direction spécifiée et vérifie les collisions.
+Paramètres : direction (str) : La direction dans laquelle le serpent doit se déplacer. Peut être l'une des valeurs suivantes :
+        - "w" : haut
+        - "s" : bas
+        - "a" : gauche
+        - "d" : droite
+    - snake (list) : Liste représentant les coordonnées des segments du serpent. La dernière position dans la liste (`snake[-1]`) est la tête du serpent.
+    - plateau (list de list) : Le plateau de jeu, représenté par une liste de listes. Chaque sous-liste est une ligne du plateau, et chaque élément représente une case du plateau.
+Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de collision), ou `False` en cas de collision (avec lui-même ou les bords du plateau).
+"""
     tete_x, tete_y = snake[-1]
     if direction == "w":
         tete_y -= 1
