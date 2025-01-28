@@ -12,6 +12,9 @@ import os
 import time
 # creation du plateau de jeu
 def jeu_plateau(haut, larg):
+    ''' 
+    parametres : hauteur et largeur du plateau
+    retourne : le plateau de jeu (liste) '''
     liste=[]
     for i in range(haut):
         liste.append([])
