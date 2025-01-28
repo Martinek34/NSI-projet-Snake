@@ -11,8 +11,13 @@ import random
 import os
 import time
 # creation du plateau de jeu
-def jeu_plateau ()
-for i in range (16):
+def jeu_plateau(haut, larg):
+    liste=[]
+    for i in range(haut):
+        liste.append([])
+        for j in range(larg):
+            liste[i].append(0)
+    return liste
   
 # Données 
 
