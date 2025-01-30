@@ -7,9 +7,9 @@
 import tkinter as tk
 
 # impotrtation des fonctions
-import random
-import os
-import time
+#import random
+#import os
+#import time
 # creation du plateau de jeu
 def jeu_plateau(haut, larg):
     ''' 
@@ -79,7 +79,8 @@ Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de co
 
     board[head_y][head_x] = "S"
     return True
-
+# Fonction pour placer une bombe (3) sur le plateau
+def bombe(liste) : 
 
 # interface graphique
 window = Tk()
