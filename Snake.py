@@ -4,10 +4,10 @@
 ####################### Projet NSI Snake ###########################
 
 # importation de tkinter pour l'interface graphique
-import tkinter as tk
+import tkinter
 
 # impotrtation des fonctions
-#import random
+import random
 #import os
 #import time
 # creation du plateau de jeu
@@ -83,10 +83,9 @@ Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de co
 def bombe(liste) : 
 
 # interface graphique
-window = Tk()
+window = tkinker.Tk()
 window.title("Snake Game")
 window.resizable(False, False)
-
-canvas = Canvas(window, bg=BACKGROUND_COLOUR,
+-
                 height=GAME_HEIGHT, width=GAME_WIDTH)
 canvas.pack()
