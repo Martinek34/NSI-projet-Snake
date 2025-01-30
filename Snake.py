@@ -45,7 +45,6 @@ pomme(jeu_plateau)
 
 # Fonction pour faire bouger le snake
 def move_snake(plateau, snake, direction):
-    
 """
 Déplace le serpent dans la direction spécifiée et vérifie les collisions.
 Paramètres : direction (str) : La direction dans laquelle le serpent doit se déplacer. Peut être l'une des valeurs suivantes :
