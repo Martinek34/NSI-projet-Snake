@@ -1,0 +1,22 @@
+Le projet: Snake
+9.1.2025
+Des étapes du projet:
+
+    1. Programmer la version simple du jeu
+    2. Ajouter des différents pouvoirs
+       
+Répartition des taches de la création du jeu 
+
+    1) Martin:    
+    • La création du dossier
+    • Créer des fonctions pour initialiser le jeu
+    • Créer la fonction pour faire bouger le serpent
+    •  
+    •  
+      
+    2) Marius:
+    • Création du plateau de jeu (16x16)
+    • Créer des fonctions pour initialiser le jeu
+    • Créer la fonction pour faire apparaitre la pomme
+    • Créer l'interface graphique 
+    •  
