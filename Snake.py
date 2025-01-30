@@ -81,6 +81,14 @@ Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de co
     return True
 # Fonction pour placer une bombe (3) sur le plateau
 def bombe(liste) : 
+   """
+  Cette fonction permet d'ajouter une bombe sur le plateau qui tue le serpent si il la mange
+  Paramètres : tableau indexé de type list, la liste passé en argument doit être une liste de liste, qui représente un tableau carré. 
+  Retourne : jeu_plateau de type list
+  Cette fonction est utilisée avec comme liste jeu_plateau
+  variable mutable de portée globale.
+  Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
+  """
 
 # interface graphique
 window = tkinker.Tk()
