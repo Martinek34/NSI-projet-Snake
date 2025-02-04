@@ -35,9 +35,7 @@ def pomme (liste):
     variable mutable de portée globale.
     Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
     """
-    liste[random(0,len(liste))][random(0,len(liste(0))] = 2
-    # Pré-condition :
-    assert (len(liste) == len(ligne[0],"vous ne respectez pas la condition de passer un tableau carré en argument")
+    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 2
     return liste
 # Zone de test
 pomme(jeu_plateau)
