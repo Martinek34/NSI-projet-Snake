@@ -35,10 +35,8 @@ def pomme (liste):
     variable mutable de portée globale.
     Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
     """
-    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 2
+    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 2 # randrange choisi un numero dans une plage donne
     return liste
-# Zone de test
-pomme(jeu_plateau)
 
 
 # Fonction pour faire bouger le snake
