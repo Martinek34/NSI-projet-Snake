@@ -38,7 +38,6 @@ def pomme (liste):
     liste[random(0,len(liste))][random(0,len(liste(0))] = 2
     # Pré-condition :
     assert (len(liste) == len(ligne[0],"vous ne respectez pas la condition de passer un tableau carré en argument")
-    liste[random(0,len(liste))][random(0,len(liste[0])] = 2
     return liste
 # Zone de test
 pomme(jeu_plateau)
