@@ -85,10 +85,29 @@ def bombe(liste) :
   variable mutable de portée globale.
   Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
   """
+    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 3 # randrange choisit un numero dans une plage donne
+    return liste
+#Fonction pour verifiier la coision
+def collision(ligne,colonne):
+    # ligne colonne representent la position de la tête du serpent
+    liste_test[ligne][colonne] == 3 :
+        print("T'as perdu na !")
+
+def affichage(liste_liste):
+    for liste in liste_liste :
+        print(liste)
+
+# Programme principal
+liste_test = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+affichage(liste_test)
+print(bombe(liste_test)) 
+
+
 
 # fonction principal
 def init ():
     jeu_plateau("selection de la hauteur du plateau","selection de la longueur du plateau")
+
 
 
 
