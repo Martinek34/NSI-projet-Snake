@@ -40,7 +40,7 @@ def pomme (liste):
 
 
 # Fonction pour faire bouger le snake
-def move_snake(plateau, snake, direction):
+def move_snake(plateau, direction):
 """
 Déplace le serpent dans la direction spécifiée et vérifie les collisions.
 Paramètres : direction (str) : La direction dans laquelle le serpent doit se déplacer. Peut être l'une des valeurs suivantes :
@@ -85,6 +85,13 @@ def bombe(liste) :
   variable mutable de portée globale.
   Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
   """
+
+# fonction principal
+def init ():
+    jeu_plateau("selection de la hauteur du plateau","selection de la longueur du plateau")
+
+
+
 
 # interface graphique
 window = tkinker.Tk()
