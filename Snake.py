@@ -8,8 +8,8 @@ import tkinter
 
 # impotrtation des fonctions
 import random
-#import os
-#import time
+import os
+import time
 # creation du plateau de jeu
 def jeu_plateau(haut, larg):
     ''' 
