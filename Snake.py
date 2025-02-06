@@ -24,7 +24,21 @@ def jeu_plateau(haut, larg):
   
 # Données 
 
+# création du serpent
+def tete (liste):
+    liste[int(len(liste)/2)][int(len(liste)/2)] = 5
+    liste[int(len(liste)/2)][int(len(liste)/2)-1] = 1
 
+# direction
+def move(event):
+    if event == "z" :
+        tete_y -= 1
+    elif event == "s" :
+        tete_y += 1
+    elif event == "d" :
+        tete_x -= 1
+    elif event == "q" :
+        tete_x += 1
   
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
