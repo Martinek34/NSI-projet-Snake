@@ -19,8 +19,7 @@ Répartition des taches de la création du jeu
     •  
       
     2) Marius:
-    • Création du plateau de jeu (16x16)
-    • Créer des fonctions pour initialiser le jeu
+    • Création du plateau de jeu 
     • Créer la fonction pour faire apparaitre la pomme
     • Créer l'interface graphique 
-    •  
+    • crée la fonction principale
