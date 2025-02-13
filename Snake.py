@@ -25,10 +25,9 @@ def jeu_plateau(haut, larg):
 # Données 
 
 # création du serpent
-def tete (liste):
-    liste[int(len(liste)/2)][int(len(liste)/2)] = 5
-    liste[int(len(liste)/2)][int(len(liste)/2)-1] = 1
-
+def tete (liste) : 
+    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 1
+    return liste
 # direction
 def move(event):
     if event == "z" :
@@ -54,7 +53,7 @@ def pomme (liste):
 
 
 # Fonction pour faire bouger le snake
-def move_snake(plateau, direction):
+
 """
 Déplace le serpent dans la direction spécifiée et vérifie les collisions.
 Paramètres : direction (str) : La direction dans laquelle le serpent doit se déplacer. Peut être l'une des valeurs suivantes :
@@ -66,29 +65,6 @@ Paramètres : direction (str) : La direction dans laquelle le serpent doit se d�
     - plateau (list de list) : Le plateau de jeu, représenté par une liste de listes. Chaque sous-liste est une ligne du plateau, et chaque élément représente une case du plateau.
 Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de collision), ou `False` en cas de collision (avec lui-même ou les bords du plateau).
 """
-    tete_x, tete_y = snake[-1]
-    if direction == "w":
-        tete_y -= 1
-    elif direction == "s":
-        tete_y += 1
-    elif direction == "a":
-        tete_x -= 1
-    elif direction == "d":
-        tete_x += 1
-
-    nouvelle_tete = [tete_x, tete_y]
-    if nouvelle_tete in snake or tete_x < 0 or tete_y < 0 or tete_x >= len(plateau[0]) or tete_y >= len(plateau):
-        return False
-    #Pré-condition
-    snake.append(new_head)
-    if board[head_y][head_x] == "F":
-        place_food(board, snake)
-    else:
-        tail = snake.pop(0)
-        board[tail[1]][tail[0]] = "."
-
-    board[head_y][head_x] = "S"
-    return True
 # Fonction pour placer une bombe (3) sur le plateau
 def bombe(liste) : 
    """
@@ -105,11 +81,17 @@ def bombe(liste) :
 def collision(ligne,colonne):
     # ligne colonne representent la position de la tête du serpent
     liste_test[ligne][colonne] == 3 :
+    if [ligne][colonne]
         print("T'as perdu na !")
 
 def affichage(liste_liste):
     for liste in liste_liste :
         print(liste)
+
+def serpent_mange_pomme(ligne, colonne)
+#On affiche une nouvelle partie de son corps, il agrandit
+liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 5
+
 
 # Programme principal
 liste_test = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
