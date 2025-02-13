@@ -26,8 +26,7 @@ def jeu_plateau(haut, larg):
 
 # création du serpent
 def tete (liste):
-    liste[int(len(liste)/2)][int(len(liste)/2)] = 5
-    liste[int(len(liste)/2)][int(len(liste)/2)-1] = 1
+    liste[random.randrange(5,len(liste)-5)][random.randrange(5,len(liste)-5)] = 5
 
 # direction
 def move(event):
