@@ -26,8 +26,8 @@ def jeu_plateau(haut, larg):
 
 # création du serpent
 def snake (plateau):
-    liste[5][5] = 5
-    liste[5][4] = 1
+    plateau[len(plateau)//2][len(plateau[0]//2] = 5
+    plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 1
 # direction
 def direction(event):
     direction = ''
@@ -49,7 +49,9 @@ def pomme (liste):
     variable mutable de portée globale.
     Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
     """
-    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 2 # randrange choisi un numero dans une plage donne
+    pomme_x = random.randrange(0,len(liste))
+    pomme_y = random.randrange(0,len(liste))
+    liste[pomme_x][pomme_y] = 2 # randrange choisit un numero dans une plage donne
     return liste
 
 
@@ -99,13 +101,24 @@ def bombe(liste) :
   variable mutable de portée globale.
   Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
   """
-    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 3 # randrange choisit un numero dans une plage donne
+    bombe_x = random.randrange(0,len(liste))
+    bombe_y = random.randrange(0,len(liste))
+    liste[bombe_x][bombe_y] = 3 # randrange choisit un numero dans une plage donne
     return liste
 #Fonction pour verifiier la coision
-def collision(ligne,colonne):
+def collision_bombe(plateau,ligne_bombe,colonne_bombe,ligne_tete,colonne_tete):
     # ligne colonne representent la position de la tête du serpent
-    liste_test[ligne][colonne] == 3 :
-        print("T'as perdu na !")
+    if plateau[ligne_bombe][colonne_bombe] == plateau[ligne_tete][colonne_tete] :
+        return True
+    else :
+        return False
+#Fonction pour verifier la colission avec la pomme
+def collision_pomme(plateau,ligne_pomme,colonne_pomme,ligne_tete,colonne_tete):
+    # ligne colonne representent la position de la tête du serpent
+    if plateau[ligne_pomme][colonne_pomme] == plateau[ligne_tete][colonne_tete] :
+        return 
+    else :
+        return False
 
 def affichage(liste_liste):
     for liste in liste_liste :
