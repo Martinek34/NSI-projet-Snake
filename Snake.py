@@ -25,19 +25,20 @@ def jeu_plateau(haut, larg):
 # Données 
 
 # création du serpent
-def tete (liste):
-    liste[random.randrange(5,len(liste)-5)][random.randrange(5,len(liste)-5)] = 5
-
+def snake (plateau):
+    liste[5][5] = 5
+    liste[5][4] = 1
 # direction
-def move(event):
+def direction(event):
+    direction = ''
     if event == "z" :
-        tete_y -= 1
+        direction = "haut"
     elif event == "s" :
-        tete_y += 1
+        direction = "bas"
     elif event == "d" :
-        tete_x -= 1
+        direction = "gauche"
     elif event == "q" :
-        tete_x += 1
+        direction = "droite"
   
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
@@ -53,7 +54,7 @@ def pomme (liste):
 
 
 # Fonction pour faire bouger le snake
-def move_snake(plateau, direction):
+def move_snake(plateau, direction, snake):
 """
 Déplace le serpent dans la direction spécifiée et vérifie les collisions.
 Paramètres : direction (str) : La direction dans laquelle le serpent doit se déplacer. Peut être l'une des valeurs suivantes :
@@ -66,11 +67,11 @@ Paramètres : direction (str) : La direction dans laquelle le serpent doit se d�
 Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de collision), ou `False` en cas de collision (avec lui-même ou les bords du plateau).
 """
     tete_x, tete_y = snake[-1]
-    if direction == "w":
+    if direction == "z":
         tete_y -= 1
     elif direction == "s":
         tete_y += 1
-    elif direction == "a":
+    elif direction == "q":
         tete_x -= 1
     elif direction == "d":
         tete_x += 1
