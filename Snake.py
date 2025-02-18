@@ -134,3 +134,57 @@ canvas.pack()
 
 
 fen.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+# test
+# 4 représente la queue du serpent 5 la tete
+
+jeu = [[4,5,0,0,0],
+         [0,0,0,0,0],
+         [0,0,0,0,0],
+         [0,0,0,0,0],
+         [0,0,0,0,0]]
+
+
+def mange_pomme(jeu):
+    
+
+def deplacement(jeu,car):
+    """ fonction qui deplace la tete et la queue du serpent """
+    # Chercher la position de la valuer 4 (en ligne et colonne)
+    for i in range(len(jeu)) :
+        for j in range(len(ligne)):
+            if jeu[...][...] == 4 :
+                queue = [i,j]
+            if jeu[...][...] == 5 :
+                tete = [i,j] 
+    if car == "z" :
+        # Deplacement vers la droite
+        # Pour la tete
+        if jeu[tete[i]][tete[j]] != 1 :
+            return "t'es mort"
+        #y a-t-il une pomme
+        appelle sous fonction 
+        if jeu[tete[i]][tete[j]]
+        else:
+            liste[tete[i]][tete[j]] = 1
+            liste[tete[i]][tete[j+1]] = 5
+    affichage(jeu)
+
+    
+        
+        
+def affichage(liste) :
+    """ fonction temporaire, avant l'interface graphique """
+    for ligne in range(len(jeu)) :
+        print(ligne)
