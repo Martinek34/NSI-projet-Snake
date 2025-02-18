@@ -28,17 +28,6 @@ def jeu_plateau(haut, larg):
 def snake (plateau):
     liste[5][5] = 5
     liste[5][4] = 1
-# direction
-def direction(event):
-    direction = ''
-    if event == "z" :
-        direction = "haut"
-    elif event == "s" :
-        direction = "bas"
-    elif event == "d" :
-        direction = "gauche"
-    elif event == "q" :
-        direction = "droite"
   
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
@@ -118,18 +107,30 @@ print(bombe(liste_test))
 
 
 
-# fonction principal
-def init ():
-    jeu_plateau("selection de la hauteur du plateau","selection de la longueur du plateau")
+# program principal
 
-
+jeu_plateau("selection de la hauteur du plateau","selection de la longueur du plateau")
+pomme(jeu_plateau)
+bombe(jeu_plateau)
+direction = "bas"
+move(jeu_plateau,direction,snake)
+if fen.bind('<d>'):
+    direction = "d"
+if fen.bind('<z>'):
+    direction = "z"
+if fen.bind('<q>'):
+    direction = "q"
+if fen.bind('<s>'):
+    direction = "s"
 
 
 
 # interface graphique
-window = tkinker.Tk()
-window.title("Snake Game")
-window.resizable(False, False)
--
-                height=GAME_HEIGHT, width=GAME_WIDTH)
+fen = tkinker.Tk()
+fen.title("Snake Game")
+fen.resizable(False, False)
+height=GAME_HEIGHT, width=GAME_WIDTH)
 canvas.pack()
+
+
+fen.mainloop()
