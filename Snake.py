@@ -29,6 +29,7 @@ def snake (plateau):
     plateau[len(plateau)//2][len(plateau[0]//2] = 5
     plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 1
     return plateau
+
   
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
@@ -39,44 +40,13 @@ def pomme (liste):
     variable mutable de portée globale.
     Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
     """
-    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 2 # randrange choisi un numero dans une plage donne
+    pomme_x = random.randrange(0,len(liste))
+    pomme_y = random.randrange(0,len(liste))
+    liste[pomme_x][pomme_y] = 2 # randrange choisit un numero dans une plage donne
     return liste
 
 
-# Fonction pour faire bouger le snake
-def move_snake(plateau, direction, snake):
-"""
-Déplace le serpent dans la direction spécifiée et vérifie les collisions.
-Paramètres : direction (str) : La direction dans laquelle le serpent doit se déplacer. Peut être l'une des valeurs suivantes :
-        - "w" : haut
-        - "s" : bas
-        - "a" : gauche
-        - "d" : droite
-    - snake (list) : Liste représentant les coordonnées des segments du serpent. La dernière position dans la liste (`snake[-1]`) est la tête du serpent.
-    - plateau (list de list) : Le plateau de jeu, représenté par une liste de listes. Chaque sous-liste est une ligne du plateau, et chaque élément représente une case du plateau.
-Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de collision), ou `False` en cas de collision (avec lui-même ou les bords du plateau).
-"""
-    tete_x, tete_y = snake[-1]
-    if direction == "z":
-        tete_y -= 1
-    elif direction == "s":
-        tete_y += 1
-    elif direction == "q":
-        tete_x -= 1
-    elif direction == "d":
-        tete_x += 1
 
-  
-    #Pré-condition
-    snake.append(new_head)
-    if board[head_y][head_x] == "F":
-        place_food(board, snake)
-    else:
-        tail = snake.pop(0)
-        board[tail[1]][tail[0]] = "."
-
-    board[head_y][head_x] = "S"
-    return True
 # Fonction pour placer une bombe (3) sur le plateau
 def bombe(liste) : 
    """
@@ -87,14 +57,27 @@ def bombe(liste) :
   variable mutable de portée globale.
   Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
   """
-    liste[random.randrange(0,len(liste))][random.randrange(0,len(liste))] = 3 # randrange choisit un numero dans une plage donne
+    bombe_x = random.randrange(0,len(liste))
+    bombe_y = random.randrange(0,len(liste))
+    liste[bombe_x][bombe_y] = 3 # randrange choisit un numero dans une plage donne
     return liste
-#Fonction pour verifiier la coision
-def collision(ligne,colonne):
-    # ligne colonne representent la position de la tête du serpent
-    liste_test[ligne][colonne] == 3 :
-        print("T'as perdu na !")
 
+   #Fonction pour verifiier la coision avec la bombe
+def collision_bombe(plateau,ligne_bombe,colonne_bombe,ligne_tete,colonne_tete):
+    # ligne colonne representent la position de la tête du serpent
+    if plateau[ligne_bombe][colonne_bombe] == plateau[ligne_tete][colonne_tete] :
+        return True
+    else :
+        return False
+        
+#Fonction pour verifier la colission avec la pomme
+def collision_pomme(plateau,ligne_pomme,colonne_pomme,ligne_tete,colonne_tete):
+    # ligne colonne representent la position de la tête du serpent
+    if plateau[ligne_pomme][colonne_pomme] == plateau[ligne_tete][colonne_tete] :
+        return 
+    else :
+        return False
+#fonction pour faire l'affichage du plateau
 def affichage(liste_liste):
     for liste in liste_liste :
         print(liste)
