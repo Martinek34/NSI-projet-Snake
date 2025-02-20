@@ -15,12 +15,12 @@ def jeu_plateau(haut, larg):
     ''' 
     parametres : hauteur et largeur du plateau
     retourne : le plateau de jeu (liste) '''
-    liste=[]
+    plateau=[]
     for i in range(haut):
-        liste.append([])
+        plateau.append([])
         for j in range(larg):
-            liste[i].append(0)
-    return liste
+            plateau[i].append(0)
+    return plateau
   
 # Données 
 
