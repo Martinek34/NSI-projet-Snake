@@ -26,8 +26,9 @@ def jeu_plateau(haut, larg):
 
 # création du serpent
 def snake (plateau):
-    liste[5][5] = 5
-    liste[5][4] = 1
+    plateau[len(plateau)//2][len(plateau[0]//2] = 5
+    plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 1
+    return plaateau
   
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
