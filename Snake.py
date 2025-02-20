@@ -26,6 +26,11 @@ def jeu_plateau(haut, larg):
 
 # création du serpent
 def snake (plateau):
+    """ 
+    la fonction snake nous met a chaque fois la tete de serpent representée par 5 au milieu du plateau et 
+    un morceau de son corps une case a gauche derrier la tete representée par le numéro 1. La fonction mange la liste plateau et elle retourne la liste plateau avec les valeurs 1 et 5 
+    qui representent le crops et la tete comme on a deja dit
+    """
     plateau[len(plateau)//2][len(plateau[0]//2] = 5
     plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 1
     return plateau
@@ -39,8 +44,8 @@ def pomme(plateau):
     rette fonction est utilisée avec comme liste jeu_plateau
     variable mutable de portée globale.
     """
-    pomme_x = random.randrange(0,len(liste))
-    pomme_y = random.randrange(0,len(liste))
+    pomme_x = random.randrange(0,len(plateau))
+    pomme_y = random.randrange(0,len(plateau))
     plateau[pomme_x][pomme_y] = 2 # randrange choisit un numero dans une plage donne
     return plateau
 
@@ -110,7 +115,7 @@ if fen.bind('<s>'):
 
 
 
-# interface graphique
+
 fen = tkinker.Tk()
 fen.title("Snake Game")
 fen.resizable(False, False)
