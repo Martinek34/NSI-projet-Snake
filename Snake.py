@@ -28,7 +28,7 @@ def jeu_plateau(haut, larg):
 def snake (plateau):
     plateau[len(plateau)//2][len(plateau[0]//2] = 5
     plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 1
-    return plaateau
+    return plateau
   
 # Fonction pour placer un pomme (2) sur le plateau
 def pomme (liste):
@@ -66,9 +66,7 @@ Retour : Retourne `True` si le serpent a été déplacé avec succès (pas de co
     elif direction == "d":
         tete_x += 1
 
-    nouvelle_tete = [tete_x, tete_y]
-    if nouvelle_tete in snake or tete_x < 0 or tete_y < 0 or tete_x >= len(plateau[0]) or tete_y >= len(plateau):
-        return False
+  
     #Pré-condition
     snake.append(new_head)
     if board[head_y][head_x] == "F":
