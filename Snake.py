@@ -32,38 +32,37 @@ def snake (plateau):
 
   
 # Fonction pour placer un pomme (2) sur le plateau
-def pomme (liste):
+def pomme(plateau):
     """
     Paramètres : tableau indexé de type list, la liste passé en argument doit être une liste de liste, qui représente un tableau carré. 
     Retourne : jeu_plateau de type list
     rette fonction est utilisée avec comme liste jeu_plateau
     variable mutable de portée globale.
-    Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
     """
     pomme_x = random.randrange(0,len(liste))
     pomme_y = random.randrange(0,len(liste))
-    liste[pomme_x][pomme_y] = 2 # randrange choisit un numero dans une plage donne
-    return liste
+    plateau[pomme_x][pomme_y] = 2 # randrange choisit un numero dans une plage donne
+    return plateau
 
 
 
 # Fonction pour placer une bombe (3) sur le plateau
-def bombe(liste) : 
-   """
-  Cette fonction permet d'ajouter une bombe sur le plateau qui tue le serpent si il la mange
+def bombe(plateau) : 
+    """ Cette fonction permet d'ajouter une bombe sur le plateau qui tue le serpent s'il la mange
   Paramètres : tableau indexé de type list, la liste passé en argument doit être une liste de liste, qui représente un tableau carré. 
   Retourne : jeu_plateau de type list
   Cette fonction est utilisée avec comme liste jeu_plateau
   variable mutable de portée globale.
-  Cette fonction remplie le tableau ar des nombres entiers compris entre 0 et la longeur du tableau donnée aléatoirement. 
   """
-    bombe_x = random.randrange(0,len(liste))
-    bombe_y = random.randrange(0,len(liste))
-    liste[bombe_x][bombe_y] = 3 # randrange choisit un numero dans une plage donne
-    return liste
+    bombe_x = random.randrange(0,len(plateau))
+    bombe_y = random.randrange(0,len(plateau)
+    plateau[bombe_x][bombe_y] = 3 # randrange choisit un numero dans une plage donne
+    return plateau
 
    #Fonction pour verifiier la coision avec la bombe
 def collision_bombe(plateau,ligne_bombe,colonne_bombe,ligne_tete,colonne_tete):
+    """Cette fonction permet de vérifier si le serpent a mangé la bombe. 
+    Elle retourne soit true soit false et si true elle tue le serpent """
     # ligne colonne representent la position de la tête du serpent
     if plateau[ligne_bombe][colonne_bombe] == plateau[ligne_tete][colonne_tete] :
         return True
@@ -72,15 +71,19 @@ def collision_bombe(plateau,ligne_bombe,colonne_bombe,ligne_tete,colonne_tete):
         
 #Fonction pour verifier la colission avec la pomme
 def collision_pomme(plateau,ligne_pomme,colonne_pomme,ligne_tete,colonne_tete):
+     """Cette fonction permet de vérifier si le serpent a mangé la pomme dons si le serpent va grandir. 
+    Elle retourne soit true soit false et si true le serpent augmente d'un carré """
     # ligne colonne representent la position de la tête du serpent
     if plateau[ligne_pomme][colonne_pomme] == plateau[ligne_tete][colonne_tete] :
         return 
     else :
         return False
+
+
 #fonction pour faire l'affichage du plateau
 def affichage(liste_liste):
-    for liste in liste_liste :
-        print(liste)
+    for plateau in liste_liste :
+        print(plateau)
 
 # Programme principal
 liste_test = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
