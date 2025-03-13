@@ -79,21 +79,35 @@ def collision_pomme(plateau,ligne_pomme,colonne_pomme,ligne_tete,colonne_tete):
      """Cette fonction permet de vérifier si le serpent a mangé la pomme dons si le serpent va grandir. 
     Elle retourne soit true soit false et si true le serpent augmente d'un carré """
     # ligne colonne representent la position de la tête du serpent
-    if plateau[ligne_pomme][colonne_pomme] == plateau[ligne_tete][colonne_tete] :
-        return 
+    if plateau[ligne_pomme] == [ligne_tete] and plateau[colonne_pomme] == [colonne_tete] :
+        print("T`as perdu")
+        return True
     else :
         return False
 
 
 #fonction pour faire l'affichage du plateau
 def affichage(liste_liste):
-    for plateau in liste_liste :
+   for plateau in liste_liste :
         print(plateau)
+    print()
 
 # Programme principal
 liste_test = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 affichage(liste_test)
 print(bombe(liste_test)) 
+liste_test = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+affichage(liste_test)
+
+bombe(liste_test)
+affichage(liste_test)
+
+pomme(liste_test)
+affichage(liste_test)
+
+snake(liste_test)
+affichage(liste_test)
+
 
 
 
