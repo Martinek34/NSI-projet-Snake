@@ -123,7 +123,7 @@ def jouer ():
         bombe(jeu_plateau)
         deplacement(jeu_plateau, direction)
         time.sleep(1) # la fonction time.sleep met le programme en pose pendant 1 seconde
-    return True
+    return jeu_plateau
 
 
 
