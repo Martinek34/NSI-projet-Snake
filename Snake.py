@@ -113,19 +113,12 @@ affichage(liste_test)
 
 # program principal
 
-jeu_plateau("selection de la hauteur du plateau","selection de la longueur du plateau")
-pomme(jeu_plateau)
-bombe(jeu_plateau)
-direction = "bas"
-move(jeu_plateau,direction,snake)
-if fen.bind('<d>'):
-    direction = "d"
-if fen.bind('<z>'):
-    direction = "z"
-if fen.bind('<q>'):
-    direction = "q"
-if fen.bind('<s>'):
-    direction = "s"
+jeu_plateau(16,16)
+while True:
+    pomme(jeu_plateau)
+    bombe(jeu_plateau)
+    deplacement(jeu_plateau, direction)
+    
 
 
 
