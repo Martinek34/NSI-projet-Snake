@@ -144,6 +144,82 @@ affichage(liste_test)
 snake(liste_test)
 affichage(liste_test)
 
+# fonction pour avencé
+# 4 représente la queue du serpent 5 la tete
+
+def deplacement(jeu,car):
+    """
+    Paramètre : jeu de typoe list et car de type int
+    fonction qui deplace la tete et la queue du serpent """
+
+    # Chercher la position de la valeur 4 (en ligne et colonne)
+    for i in range(len(jeu)) :
+        for j in range(5):
+            if jeu[i][j] == 4 :
+                queue = [i,j]
+            elif jeu[i][j] == 5 :
+                tete = [i,j]
+        print (tete)
+    if car == 8 :
+        # Deplacement vers le haut
+        # Pour la tete
+        if jeu[tete[i-1]] < 0 or jeu[tete[i+1]][tete[j]] == 3 or 1 or 4 :
+            return False # permet l'arret du programme quand on perd
+        #y a-t-il une pomme
+        #  appelle sous fonction 
+        elif jeu[tete[i-1]][tete[j]] == 2:
+            liste[tete[i]][tete[j]] = 1
+            liste[tete[i-1]][tete[j]] = 5
+        else:
+            liste[tete[i]][tete[j]] = 4
+            liste[tete[i-1]][tete[j]] = 5
+            liste[queue[i]][queue[j]] = 0
+    
+    elif car == 6 :
+        # Deplacement vers la droite
+        # Pour la tete
+        if jeu[tete[j+1]] > len(jeu) or jeu[tete[i]][tete[j+1]] == 3 or 1 or 4:
+            return False
+        #y a-t-il une pomme
+        #appelle sous fonction 
+        if jeu[tete[i]][tete[j+1]] == 2:
+            liste[tete[i]][tete[j]] = 1
+            liste[tete[i]][tete[j+1]] = 5
+            
+        elif jeu[tete[i]][tete[j+1]] == 0:
+            liste[tete[i]][tete[j]] = 4
+            liste[tete[i]][tete[j+1]] = 5
+            liste[queue[i]][queue[j]] = 0
+        print(b)
+    elif car == 4 :
+        # Deplacement vers le bas
+        # Pour la tete
+        if jeu[tete[i+1]] > len(jeu) or jeu[tete[i+1]][tete[j]] == 3 or 1 or 4:
+            return False 
+        #y a-t-il une pomme
+        #  appelle sous fonction 
+        elif jeu[tete[i+1]][tete[j]] == 2:
+            liste[tete[i]][tete[j]] = 1
+            liste[tete[i+1]][tete[j]] = 5
+        else:
+            liste[tete[i]][tete[j]] = 4
+            liste[tete[i+1]][tete[j]] = 5
+            liste[queue[i]][queue[j]] = 0
+    elif car == 2 :
+        # Deplacement vers la gauche
+        # Pour la tete
+        if jeu[tete[j-1]] < 0 or jeu[tete[i]][tete[j-1]] == 3 or 1 or 4:
+            return False
+        #y a-t-il une pomme
+        #  appelle sous fonction 
+        elif jeu[tete[i]][tete[j-1]] == 2:
+            liste[tete[i]][tete[j]] = 1
+            liste[tete[i]][tete[j-1]] = 5
+        else:
+            liste[tete[i]][tete[j]] = 4
+            liste[tete[i]][tete[j-1]] = 5
+            liste[queue[i]][queue[j]] = 0
+    return jeu
 
 
 
