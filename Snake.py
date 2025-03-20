@@ -71,10 +71,45 @@ def collision_bombe(plateau,ligne_bombe,colonne_bombe,ligne_tete,colonne_tete):
     # ligne colonne representent la position de la tête du serpent
     if plateau[ligne_bombe][colonne_bombe] == plateau[ligne_tete][colonne_tete] :
         return True
-        print("T'as perdu)
+        print("T'as perdu")
     else :
         return False
-        
+
+def collision_plateau(colonne_tete, ligne_tete, haut, larg):
+    """
+    Cette fonction permet de vérifier si la tête du serpent est en dehors du plateau et si elle heurte un mur, ce qui met fin au jeu.
+    Paramètres : 
+    - colonne_tete : entier représentant la colonne de la tête du serpent
+    - ligne_tete : entier représentant la ligne de la tête du serpent
+    - haut : liste contenant un seul entier représentant la hauteur du plateau
+    - larg : liste contenant un seul entier représentant la largeur du plateau
+    Retourne : 
+    - booléen : True si la tête du serpent est en dehors des limites du plateau, sinon False
+    Cette fonction est utilisée pour terminer le jeu si le serpent heurte un mur.
+    """
+    # Kontrola, zda hlava hada narazila do stěny
+    if colonne_tete < 0:
+        return True
+    if colonne_tete >= larg[0]:
+        return True
+    if ligne_tete < 0:
+        return True
+    if ligne_tete >= haut[0]:
+        return True
+    return False
+
+# Zone de test
+colonne_tete = 15  # La colonne de la tete du serpent
+ligne_tete = 0  # La ligne de la tete du serpent
+haut = [15]  # hauteur du plateau de jeu
+larg = [20]  # largeur du plateau de jeu
+
+# Cela nous permet d'afficher que le joueur a perdu
+if collision_plateau(colonne_tete, ligne_tete, haut, larg):
+    print("Le serpent a frappé le mur ! Le jeu est terminé.")
+
+
+
 #Fonction pour verifier la colission avec la pomme
 def collision_pomme(plateau,ligne_pomme,colonne_pomme,ligne_tete,colonne_tete):
      """Cette fonction permet de vérifier si le serpent a mangé la pomme dons si le serpent va grandir. 
