@@ -32,7 +32,7 @@ def snake (plateau):
     qui representent le crops et la tete comme on a deja dit
     """
     plateau[len(plateau)//2][len(plateau[0]//2] = 5
-    plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 1
+    plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 4
     return plateau
 
   
@@ -92,6 +92,7 @@ def affichage(liste_liste):
         print(plateau)
     print()
 
+
 # Programme principal
 liste_test = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 affichage(liste_test)
@@ -113,12 +114,16 @@ affichage(liste_test)
 
 # program principal
 
-jeu_plateau(16,16)
-while True:
-    pomme(jeu_plateau)
-    bombe(jeu_plateau)
-    deplacement(jeu_plateau, direction)
-    
+def jouer ():
+    jeu_plateau(16,16)
+    snake(jeu_plateau)
+    while True:
+        direction = int(input())
+        pomme(jeu_plateau)
+        bombe(jeu_plateau)
+        deplacement(jeu_plateau, direction)
+        time.sleep(1) # la fonction time.sleep met le programme en pose pendant 1 seconde
+    return True
 
 
 
