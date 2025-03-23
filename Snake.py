@@ -31,7 +31,7 @@ def snake (plateau):
     un morceau de son corps une case a gauche derrier la tete representée par le numéro 1. La fonction mange la liste plateau et elle retourne la liste plateau avec les valeurs 1 et 5 
     qui representent le crops et la tete comme on a deja dit
     """
-    plateau[len(plateau)//2][len(plateau[0]//2] = 5
+    plateau[len(plateau)//2][len(plateau[0]//2)] = 5
     plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 4
     return plateau
 
@@ -60,7 +60,7 @@ def bombe(plateau) :
   variable mutable de portée globale.
   """
     bombe_x = random.randrange(0,len(plateau))
-    bombe_y = random.randrange(0,len(plateau)
+    bombe_y = random.randrange(0,len(plateau))
     plateau[bombe_x][bombe_y] = 3 # randrange choisit un numero dans une plage donne
     return plateau
 
@@ -239,7 +239,7 @@ def jouer ():
 
 
 
-fen = tkinker.Tk()
+fen = tkinter.Tk()
 fen.title("Snake Game")
 fen.resizable(False, False)
 height=GAME_HEIGHT, width=GAME_WIDTH)
