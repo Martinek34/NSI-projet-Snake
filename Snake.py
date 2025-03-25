@@ -226,7 +226,7 @@ def deplacement(jeu,car):
 # program principal
 
 def jouer ():
-    jeu_plateau(16,16)
+    jeu_plateau(400,400)
     snake(jeu_plateau)
     while True:
         direction = int(input())
