@@ -67,6 +67,7 @@ def bombe(plateau) :
 
 #fonction pour faire l'affichage du plateau
 def affichage(liste_liste):
+""" Une fonction qui prend une liste et qui affiche le plateau sur l'écran """
    for plateau in liste_liste :
         print(plateau)
     print()
@@ -170,6 +171,7 @@ def deplacement(jeu,car):
 # program principal
 
 def jouer ():
+""" Une fonction qui permet jouer le jeu """
     jeu_plateau(400,400)
     snake(jeu_plateau)
     while True:
