@@ -1,13 +1,12 @@
 Le projet: Snake
-9.1.2025
-23.1.2025
-28.1.2025
-30.1.2025
+début 9.1.2025
+fin 25.3.2025
 
 Des étapes du projet:
 
     1. Programmer la version simple du jeu
     2. Ajouter des différents pouvoirs
+    3. Créer les fonctions les fonctions lesplus compliqués (déplacer le serpent)
        
 Répartition des taches de la création du jeu 
 
@@ -15,10 +14,11 @@ Répartition des taches de la création du jeu
     • La création du dossier
     • Créer des fonctions pour initialiser le jeu
     • Créer la fonction pour placer la bombe
-    •  crée la fonction principale
+    • Créer la fonction principale
+    • Créer la fonction pour faire apparaitre la bombe 
       
     2) Marius:
     • Création du plateau de jeu modifiable
     • Créer la fonction pour faire apparaitre la pomme
     • Créer l'interface graphique 
-    • Créer la fonction pour faire bouger le serpent
+    • Créer la fonction pour faire bouger le serpent et pour vérifier la colission 
