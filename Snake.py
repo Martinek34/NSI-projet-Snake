@@ -240,13 +240,17 @@ def jouer ():
 
 
 fen = tkinter.Tk()
+fen.geometry('400x400')
 fen.title("Snake Game")
 fen.resizable(False, False)
-height=GAME_HEIGHT, width=GAME_WIDTH)
-canvas.pack()
-
+fen['bg'] = 'blue'
+label = tkinter.Label(fen, text=jeu, bg="blue")
+label.pack()
+b1 = tkinter.Button(fen, text='Lancer', command=jouer)
 
 fen.mainloop()
+
+
 
 
 
