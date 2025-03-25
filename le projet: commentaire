@@ -14,12 +14,11 @@ Répartition des taches de la création du jeu
     1) Martin:    
     • La création du dossier
     • Créer des fonctions pour initialiser le jeu
-    • Créer la fonction pour faire bouger le serpent
     • Créer la fonction pour placer la bombe
-    •  
+    •  crée la fonction principale
       
     2) Marius:
-    • Création du plateau de jeu non-modifiable
+    • Création du plateau de jeu modifiable
     • Créer la fonction pour faire apparaitre la pomme
     • Créer l'interface graphique 
-    • crée la fonction principale
+    • Créer la fonction pour faire bouger le serpent
