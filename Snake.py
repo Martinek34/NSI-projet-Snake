@@ -28,8 +28,8 @@ def jeu_plateau(haut, larg):
 def snake (plateau):
     """ 
     la fonction snake nous met a chaque fois la tete de serpent representée par 5 au milieu du plateau et 
-    un morceau de son corps une case a gauche derrier la tete representée par le numéro 1. La fonction mange la liste plateau et elle retourne la liste plateau avec les valeurs 1 et 5 
-    qui representent le crops et la tete comme on a deja dit
+    la queue une case a gauche derrier la tete representée par le numéro 4. La fonction mange la liste plateau et elle retourne la liste plateau avec les valeurs 4 et 5 
+    qui representent la queue et la tete comme on a deja dit
     """
     plateau[len(plateau)//2][len(plateau[0]//2)] = 5
     plateau[len(plateau)//2][(len(plateau[0]//2)-1] = 4
@@ -65,12 +65,7 @@ def bombe(plateau) :
     return plateau
 
 
-#fonction pour faire l'affichage du plateau
-def affichage(liste_liste):
-""" Une fonction qui prend une liste et qui affiche le plateau sur l'écran """
-   for plateau in liste_liste :
-        print(plateau)
-    print()
+
 
 
 # Programme principal
@@ -184,7 +179,7 @@ def jouer ():
 
 
 
-
+#Interface graphique 
 fen = tkinter.Tk()
 fen.geometry('400x400')
 fen.title("Snake Game")
